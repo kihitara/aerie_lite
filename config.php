@@ -2,7 +2,7 @@
 
 // Name of the theme's folder
 
-$THEME->name = 'aerie';
+$THEME->name = 'aerie_lite';
 
 // Parent style sheets
 
@@ -22,7 +22,7 @@ $THEME->enable_dock = true;
 
 // CSS Post Process
 
-$THEME->csspostprocess = 'aerie_process_css';
+$THEME->csspostprocess = 'aerie_lite_process_css';
 
 // Layouts used
 

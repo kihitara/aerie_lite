@@ -1,83 +1,83 @@
 <?php
 
-function aerie_process_css($css, $theme) {
+function aerie_lite_process_css($css, $theme) {
  
     if (!empty($theme->settings->pagebackgroundcolor)) {
         $pagebackgroundcolor = $theme->settings->pagebackgroundcolor;
     } else {
         $pagebackgroundcolor = null;
     }
-    $css = aerie_set_pagebackgroundcolor($css, $pagebackgroundcolor);
+    $css = aerie_lite_set_pagebackgroundcolor($css, $pagebackgroundcolor);
     
     if (!empty($theme->settings->insidebackgroundcolor)) {
         $insidebackgroundcolor = $theme->settings->insidebackgroundcolor;
     } else {
         $insidebackgroundcolor = null;
     }
-    $css = aerie_set_insidebackgroundcolor($css, $insidebackgroundcolor);
+    $css = aerie_lite_set_insidebackgroundcolor($css, $insidebackgroundcolor);
     
     if (!empty($theme->settings->framecolor)) {
         $framecolor = $theme->settings->framecolor;
     } else {
         $framecolor = null;
     }
-    $css = aerie_set_framecolor($css, $framecolor);
+    $css = aerie_lite_set_framecolor($css, $framecolor);
     
     if (!empty($theme->settings->blockcolor)) {
         $blockcolor = $theme->settings->blockcolor;
     } else {
         $blockcolor = null;
     }
-    $css = aerie_set_blockcolor($css, $blockcolor);
+    $css = aerie_lite_set_blockcolor($css, $blockcolor);
     
     if (!empty($theme->settings->navbarcolor)) {
         $navbarcolor = $theme->settings->navbarcolor;
     } else {
         $navbarcolor = null;
     }
-    $css = aerie_set_navbarcolor($css, $navbarcolor);
+    $css = aerie_lite_set_navbarcolor($css, $navbarcolor);
     
     if (!empty($theme->settings->custommenucolor)) {
         $custommenucolor = $theme->settings->custommenucolor;
     } else {
         $custommenucolor = null;
     }
-    $css = aerie_set_custommenucolor($css, $custommenucolor);
+    $css = aerie_lite_set_custommenucolor($css, $custommenucolor);
     
     if (!empty($theme->settings->custommenuhovercolor)) {
         $custommenuhovercolor = $theme->settings->custommenuhovercolor;
     } else {
         $custommenuhovercolor = null;
     }
-    $css = aerie_set_custommenuhovercolor($css, $custommenuhovercolor);
+    $css = aerie_lite_set_custommenuhovercolor($css, $custommenuhovercolor);
     
     if (!empty($theme->settings->topiccolor)) {
         $topiccolor = $theme->settings->topiccolor;
     } else {
         $topiccolor = null;
     }
-    $css = aerie_set_topiccolor($css, $topiccolor);
+    $css = aerie_lite_set_topiccolor($css, $topiccolor);
     
     if (!empty($theme->settings->highlightedtopiccolor)) {
         $highlightedtopiccolor = $theme->settings->highlightedtopiccolor;
     } else {
         $highlightedtopiccolor = null;
     }
-    $css = aerie_set_highlightedtopiccolor($css, $highlightedtopiccolor);
+    $css = aerie_lite_set_highlightedtopiccolor($css, $highlightedtopiccolor);
  
     if (!empty($theme->settings->regionwidth)) {
         $regionwidth = $theme->settings->regionwidth;
     } else {
         $regionwidth = null;
     }
-    $css = aerie_set_regionwidth($css, $regionwidth);
+    $css = aerie_lite_set_regionwidth($css, $regionwidth);
  
     if (!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
     } else {
         $customcss = null;
     }
-    $css = aerie_set_customcss($css, $customcss);
+    $css = aerie_lite_set_customcss($css, $customcss);
  
     return $css;
 }
@@ -89,7 +89,7 @@ function aerie_process_css($css, $theme) {
  * @param mixed $pagebackgroundcolor
  * @return string
  */
-function aerie_set_pagebackgroundcolor($css, $pagebackgroundcolor) {
+function aerie_lite_set_pagebackgroundcolor($css, $pagebackgroundcolor) {
     $tag = '[[setting:pagebackgroundcolor]]';
     $replacement = $pagebackgroundcolor;
     if (is_null($replacement)) {
@@ -106,7 +106,7 @@ function aerie_set_pagebackgroundcolor($css, $pagebackgroundcolor) {
  * @param mixed $insidebackgroundcolor
  * @return string
  */
-function aerie_set_insidebackgroundcolor($css, $insidebackgroundcolor) {
+function aerie_lite_set_insidebackgroundcolor($css, $insidebackgroundcolor) {
     $tag = '[[setting:insidebackgroundcolor]]';
     $replacement = $insidebackgroundcolor;
     if (is_null($replacement)) {
@@ -123,7 +123,7 @@ function aerie_set_insidebackgroundcolor($css, $insidebackgroundcolor) {
  * @param mixed $framecolor
  * @return string
  */
-function aerie_set_framecolor($css, $framecolor) {
+function aerie_lite_set_framecolor($css, $framecolor) {
     $tag = '[[setting:framecolor]]';
     $replacement = $framecolor;
     if (is_null($replacement)) {
@@ -140,7 +140,7 @@ function aerie_set_framecolor($css, $framecolor) {
  * @param mixed $blockcolor
  * @return string
  */
-function aerie_set_blockcolor($css, $blockcolor) {
+function aerie_lite_set_blockcolor($css, $blockcolor) {
     $tag = '[[setting:blockcolor]]';
     $replacement = $blockcolor;
     if (is_null($replacement)) {
@@ -157,7 +157,7 @@ function aerie_set_blockcolor($css, $blockcolor) {
  * @param mixed $navbarcolor
  * @return string
  */
-function aerie_set_navbarcolor($css, $navbarcolor) {
+function aerie_lite_set_navbarcolor($css, $navbarcolor) {
     $tag = '[[setting:navbarcolor]]';
     $replacement = $navbarcolor;
     if (is_null($replacement)) {
@@ -174,7 +174,7 @@ function aerie_set_navbarcolor($css, $navbarcolor) {
  * @param mixed $custommenucolor
  * @return string
  */
-function aerie_set_custommenucolor($css, $custommenucolor) {
+function aerie_lite_set_custommenucolor($css, $custommenucolor) {
     $tag = '[[setting:custommenucolor]]';
     $replacement = $custommenucolor;
     if (is_null($replacement)) {
@@ -191,7 +191,7 @@ function aerie_set_custommenucolor($css, $custommenucolor) {
  * @param mixed $custommenuhovercolor
  * @return string
  */
-function aerie_set_custommenuhovercolor($css, $custommenuhovercolor) {
+function aerie_lite_set_custommenuhovercolor($css, $custommenuhovercolor) {
     $tag = '[[setting:custommenuhovercolor]]';
     $replacement = $custommenuhovercolor;
     if (is_null($replacement)) {
@@ -208,7 +208,7 @@ function aerie_set_custommenuhovercolor($css, $custommenuhovercolor) {
  * @param mixed $topiccolor
  * @return string
  */
-function aerie_set_topiccolor($css, $topiccolor) {
+function aerie_lite_set_topiccolor($css, $topiccolor) {
     $tag = '[[setting:topiccolor]]';
     $replacement = $topiccolor;
     if (is_null($replacement)) {
@@ -225,7 +225,7 @@ function aerie_set_topiccolor($css, $topiccolor) {
  * @param mixed $highlightedtopiccolor
  * @return string
  */
-function aerie_set_highlightedtopiccolor($css, $highlightedtopiccolor) {
+function aerie_lite_set_highlightedtopiccolor($css, $highlightedtopiccolor) {
     $tag = '[[setting:highlightedtopiccolor]]';
     $replacement = $highlightedtopiccolor;
     if (is_null($replacement)) {
@@ -242,7 +242,7 @@ function aerie_set_highlightedtopiccolor($css, $highlightedtopiccolor) {
  * @param mixed $regionwidth
  * @return string
  */
-function aerie_set_regionwidth($css, $regionwidth) {
+function aerie_lite_set_regionwidth($css, $regionwidth) {
     $tag = '[[setting:regionwidth]]';
     $doubletag = '[[setting:regionwidthdouble]]';
     $replacement = $regionwidth;
@@ -261,7 +261,7 @@ function aerie_set_regionwidth($css, $regionwidth) {
  * @param mixed $customcss
  * @return string
  */
-function aerie_set_customcss($css, $customcss) {
+function aerie_lite_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {
