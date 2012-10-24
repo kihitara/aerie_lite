@@ -123,7 +123,6 @@ echo $OUTPUT->doctype() ?>
         </div>
     </div>
 </div>
-        <div class="clearfix"></div>
     </div>
 
 <!-- START OF FOOTER -->
